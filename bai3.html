@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="so">
+<button onclick="soNguyen()">Kiểm tra số nguyên</button>
+<h1>Số này <span id="hienthi"></span></h1>
+<script>
+    function soNguyen() {
+        let a = document.getElementById('so').value;
+
+        if (isNaN(a)){
+            document.getElementById('hienthi').innerHTML = 'Không phải số nguyên'
+        }else {
+            if (a > 0) {
+                document.getElementById('hienthi').innerHTML = 'Lớn hơn 0'
+            } else {
+                document.getElementById('hienthi').innerHTML = 'Nhỏ hơn 0'
+            }
+        }
+
+    }
+
+</script>
+
+</body>
+</html>

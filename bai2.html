@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập tuổi của học sinh:
+<input type="number" id="nhaptuoi">
+<button onclick="kiemTra()">Xét</button>
+<h1>Kết quả: <span id="hienthi"></span> </h1>
+<script>
+    function kiemTra() {
+        let a = +document.getElementById('nhaptuoi').value;
+        if (a == 16) {
+            document.getElementById('hienthi').innerHTML = 'Ok. Bạn này vào lớp 10'
+        } else if (a > 16) {
+            document.getElementById('hienthi').innerHTML = 'Bạn đã quá tuổi vào lớp 10'
+        } else {
+            document.getElementById('hienthi').innerHTML = 'Tuổi gì vào lớp 10'
+        }
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="3"><h1>Xếp loại học lực học sinh</h1></td>
+    </tr>
+    <tr>
+        <td>Điểm kiểm tra</td>
+        <td>Điểm thi giữ kỳ</td>
+        <td>Điểm thi cuối kỳ</td>
+    </tr>
+    <tr>
+        <td><input type="number" id="diem1"></td>
+        <td><input type="number" id="diem2"></td>
+        <td><input type="number" id="diem3"></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="diemTrungBinh()"><h3>Xếp loại:</h3></button>
+        </td>
+        <td><h1 id="ketqua"></h1></td>
+        <td><h5 id="diem"></h5></td>
+    </tr>
+</table>
+<script>
+    function diemTrungBinh() {
+        let a = +document.getElementById('diem1').value;
+        let b = +document.getElementById('diem2').value;
+        let c = +document.getElementById('diem3').value;
+        let d = (a + b + c) / 3;
+        document.getElementById('diem').innerHTML = 'Điểm TB:' + ' ' + d;
+        if (d > 8) {
+            document.getElementById('ketqua').innerHTML = 'Giỏi'
+        } else
+            if (d > 6.5) {
+            document.getElementById('ketqua').innerHTML = 'Khá'
+        } else
+            if (d > 5) {
+            document.getElementById('ketqua').innerHTML = 'Trung Bình'
+        } else
+            if (d > 4) {
+            document.getElementById('ketqua').innerHTML = 'Yếu'
+        } else {
+            document.getElementById('ketqua').innerHTML = 'Kém'
+        }
+    }
+</script>
+
+
+</body>
+</html>
