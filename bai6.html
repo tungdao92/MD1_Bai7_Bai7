@@ -5,6 +5,19 @@
     <title>Title</title>
 </head>
 <body>
+<!--<h1>Doanh số bán hàng tháng:</h1>-->
+<!--<input type="text" id="doanhso">-->
+<script>
+    let doanhso = +prompt('Doanh số bán hàng(triệu đồng)', '')
+    if (doanhso > 100) {
+        alert('Vượt chỉ tiêu')
+    } else if (doanhso > 80) {
+        alert('Đạt yêu cầu')
+    } else if (doanhso > 60) {
+        alert('Chưa đạt yêu cầu')
+    } else alert('Kém')
+
+</script>
 
 </body>
 </html>
